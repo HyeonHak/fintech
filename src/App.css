@@ -44,3 +44,8 @@
   text-align: center;
   padding-top:10px;
 }
+
+#home_icon{
+  position : absolute;
+  left: 0px;
+}

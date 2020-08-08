@@ -2,21 +2,32 @@ import React, { Component, Fragment } from 'react';
 import './App.css';
 import Register from './inputText';
 import 'bootstrap/dist/css/bootstrap.css'
-import DropBtn from './dropBtn';
-import CheckBtn from './checkBtn';
+import DropBtn from './Components/dropBtn';
+import CheckBtn from './Components/checkBtn';
 import { Button } from 'reactstrap';
 import Start from './start2';
-import Btn from './Btn';
-import Toast from './Toast';
-import Form from './basicForm';
-import StoryForm from './storyForm';
-import MakerForm from './makerForm';
+import Btn from './Components/Btn';
+import Toast from './Components/Toast';
+import BasicForm from './Components/basicForm';
+import StoryForm from './Components/storyForm';
+import MakerForm from './Components/makerForm';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ColoredLine from './Components/ColoredLine';
 
 const App = () => {
 
   return (
     <Fragment>
-      
+
+      <div id="title">
+      <span id="home_icon">
+      <FontAwesomeIcon icon={faHome} size="1x" />
+      </span>
+      투명 펀딩
+      </div>
+      <ColoredLine color="#8E8A89" />
+
       {/* 메이커 정보 페이지
       <MakerForm></MakerForm> */}
       
@@ -24,15 +35,14 @@ const App = () => {
       <StoryForm></StoryForm> */}
 
       {/* 기본 정보 페이지
-      <basicForm></basicForm> */}
+      <BasicForm></BasicForm> */}
 
+      
       {/* 작성 폼을 보여주는 페이지
       <Start name="조현학"/>
       <Toast /> */}
 
-
-      {/* 프로젝트 만들기 누르면 나오는 첫번째 페이지
-      <p id="title">투명 펀딩</p>
+      설명 : 프로젝트 만들기 누르면 나오는 첫번째 페이지
       <Register name="메이저 (기업)명 *"/>
       <DropBtn />
       <br></br>
@@ -41,7 +51,7 @@ const App = () => {
       <CheckBtn name="(선택) 투명 펀딩을 위한 유용한 뉴스레터 받기"/>
       <br></br>
       <Button color="secondary" size="lg">펀딩 시작하기</Button>
-      <Btn name="제출하기"/> */}
+
     </Fragment>
   );
 }

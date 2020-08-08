@@ -13,6 +13,13 @@ const Example = (props) => {
         <Input type="password" name="password" id="examplePassword" placeholder="목표 금액 입력" />
       </FormGroup>
       <FormGroup>
+        <Label for="exampleFile">대표 이미지*</Label>
+        <Input type="file" name="file" id="exampleFile" />
+        <FormText color="muted">
+          3MB 이하의 JPEG, PNG파일
+        </FormText>
+      </FormGroup>
+      <FormGroup>
         <Label for="exampleSelect">카테고리 *</Label>
         <Input type="select" name="select" id="exampleSelect">
           <option>테크 가전</option>
@@ -22,20 +29,19 @@ const Example = (props) => {
           <option>5</option>
         </Input>
       </FormGroup>
-      
       <FormGroup>
-        <Label for="exampleText">Text Area</Label>
-        <Input type="textarea" name="text" id="exampleText" />
-      </FormGroup>
-      <FormGroup>
-        <Label for="exampleFile">대표 이미지*</Label>
-        <Input type="file" name="file" id="exampleFile" />
+        
+        <Label for="exampleDate">프로젝트 종료일 *</Label>
         <FormText color="muted">
-          3MB 이하의 JPEG, PNG파일
+          콘텐츠 확인 및 프로젝트 진행 일정과 리워드 발송 일정을 고려하여 종료일을 설정해주세요.
         </FormText>
+        <Input
+          type="date"
+          name="date"
+          id="exampleDate"
+          placeholder="date placeholder"
+        />
       </FormGroup>
-      
-      
       <Button>저장 하기</Button>
     </Form>
   );
